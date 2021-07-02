@@ -1,0 +1,27 @@
+---
+layout: global
+---
+
+<p class="max-w-2xl text-gray-400 text-2xl mx-auto mb-10">
+  My plugins for my favorite personal knowledgebase, <a href="https://obsidian.md" class="text-purple-700" target="_blank">Obsidian</a>
+</p>
+<ul class="
+  grid grid-flow-row w-full gap-10
+  grid-cols-1 grid-rows-{{ collections.project.length }}
+  md:grid-cols-2 md:grid-rows-{{ collections.project.length | divided_by: 2 | ceil }}
+">
+  {%- for project in collections.project -%}
+    <li class="
+      border border-gray-50 border-opacity-10
+      w-full
+    ">
+      <a href="{{ project.data.url }}" class="block w-full h-full">
+        <img src="{{ project.data.imageUrl }}" class="w-full h-60 object-cover object-bottom"/> 
+        <div class="p-10">
+          <h2 class="text-xl font-bold mb-5">{{ project.data.title }}</h2>
+          <p>{{ project.data.description }}</p>
+        </div>
+      </a>
+    </li>
+  {%- endfor -%}
+<ul>

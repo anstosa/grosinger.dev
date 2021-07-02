@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}{% if title %} - {% endif %}Tony Grosinger</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body class="bg-gray-900 min-h-full text-gray-400">
+    <header class="
+      bg-gray-800 bg-opacity-70
+      backdrop-filter backdrop-blur
+      border-b border-gray-50 border-opacity-10
+      fixed inset-x-0 top-0
+      h-16 px-10
+      flex justify-center items-center
+    ">
+      <a 
+        href="/"
+        class="
+          max-w-3xl w-full
+          flex space-between items-center
+          text-xl tracking-widest
+        "
+      >
+        {{ '/src/images/obsidian.svg' | svgContents }}
+        TONY GROSINGER
+      </a>
+      <div class="flex text-3xl gap-4">
+        <a href="https://github.com/tgrosinger" target="_blank">
+          {{ '/src/images/github.svg' | svgContents }}
+        </a>
+        <a href="https://grosinger.net" target="_blank">
+          {{ '/src/images/profile.svg' | svgContents }}
+        </a>
+      </div>
+    </header>
+    <main class="mt-16 p-10 mx-auto max-w-4xl">
+      {{ content }}
+    </main>
+  </body>
+</html>
