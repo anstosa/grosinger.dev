@@ -9,7 +9,7 @@ module.exports = (config) => {
     dir: {
       input: "src",
       layouts: "_layouts",
-      output: "dist"
+      output: "docs"
     }
   };
 }
